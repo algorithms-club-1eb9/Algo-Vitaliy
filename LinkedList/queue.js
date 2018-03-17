@@ -1,19 +1,5 @@
-function Queue()
-{ 
- this.stac=new Array();
- this.dequeue=function(){
-  return this.stac.pop(); 
- } 
- this.enqueue=function(item){
-  this.stac.unshift(item);
- }
-}
-
-var Q=new Queue();
-Q.enqueue("A");
-Q.enqueue("B");
-Q.enqueue("C");
-
-alert(Q.dequeue());
-alert(Q.dequeue());
-alert(Q.dequeue());
+var queue = [];
+queue.push(2);         // queue is now [2]
+queue.push(5);         // queue is now [2, 5]
+var i = queue.shift(); // queue is now [5]
+alert(i);              // displays 2
